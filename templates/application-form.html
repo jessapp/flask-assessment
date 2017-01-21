@@ -1,0 +1,36 @@
+<!doctype html>
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block title %}<title>Application Form</title>{% endblock %}
+</head>
+{% block content %}
+
+  <h1>Ubermelon Job Application</h1><br>
+
+  <p>Ubermelon is hiring engeeiners. Fill out this form to start your
+  application today!</p><br>
+
+  <form action="/application-success" method="POST">
+
+      <label for="first-name">First Name:</label>
+      <input id="first-name" type="text" name="first-name"></br>
+
+      <label for="last-name">Last Name:</label>
+      <input id="last-name" type="text" name="last-name" class="last-name"></br>
+
+      <label for="salary">Salary Requirement (as a number):</label>
+      <input id="salary" type="text" name="salary"></br>
+
+      <label for="job">Which position would you like to apply for?</label>
+      <select name="job">
+        {% for job in jobs %}
+          <option value="{{ job }}">{{ job }}</option>
+        {% endfor %}
+      </select>
+        
+      <input type="submit" name="submit" value="Submit">
+  </form>
+
+{% endblock %}
+</html>

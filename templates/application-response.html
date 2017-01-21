@@ -1,0 +1,14 @@
+<!doctype html>
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block title %}<title>Application Response</title>{% endblock %}
+</head>
+{% block content %}
+
+Thank you, {{first_name}} {{last_name}}, for applying to be a {{job}}. Your
+minimum salary requirement is {{"${:,.2f}".format(salary|float)}}.
+
+
+{% endblock %}
+</html>
