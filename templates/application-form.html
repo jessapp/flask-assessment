@@ -19,7 +19,8 @@
       <label for="last-name">Last Name:</label>
       <input id="last-name" type="text" name="last-name" class="last-name"></br>
 
-      <label for="salary">Salary Requirement (as a number):</label>
+      <!-- Conversion to Jinja doesn't work with commas, can't figure out why -->
+      <label for="salary">Salary Requirement (as a number without commas):</label>
       <input id="salary" type="text" name="salary"></br>
 
       <label for="job">Which position would you like to apply for?</label>
